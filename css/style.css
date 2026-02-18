@@ -1,10 +1,6 @@
 :root {
-    --frozen-water: #bee9e8ff;
-    --pacific-blue: #62b6cbff;
     --yale-blue: #1b4965;
-    --yale-blue2: #2c719c;
-    --pale-sky: #cae9ffff;
-    --fresh-sky: #5fa8d3ff;
+    --pacific-blue: #2c719c;
 }
 
 
@@ -34,7 +30,7 @@ footer{
 }
 
 .btn-custom{
-    background-color: var(--yale-blue2);
+    background-color: var(--pacific-blue);
     color: white;
 }
 
