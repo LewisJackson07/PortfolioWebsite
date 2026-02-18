@@ -1,7 +1,8 @@
 :root {
     --frozen-water: #bee9e8ff;
     --pacific-blue: #62b6cbff;
-    --yale-blue: #1b4965ff;
+    --yale-blue: #1b4965;
+    --yale-blue2: #2c719c;
     --pale-sky: #cae9ffff;
     --fresh-sky: #5fa8d3ff;
 }
@@ -21,4 +22,23 @@ h1, h2, h3, h4, h5, h6 {
 
 *{
     font-family: "Open Sans";
+}
+
+nav{
+    background-color: var(--yale-blue);
+}
+
+footer{
+    background-color: var(--yale-blue);
+    color: white;
+}
+
+.btn-custom{
+    background-color: var(--yale-blue2);
+    color: white;
+}
+
+.btn-custom:hover{
+    background-color: var(--yale-blue);
+    color: white;
 }
