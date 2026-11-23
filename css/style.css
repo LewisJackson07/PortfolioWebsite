@@ -86,14 +86,17 @@ a:focus-visible,
 }
 
 .navbar .nav-link {
-	color: rgba(255, 255, 255, .8);
+	color: #fff;
 	font-weight: 500;
+	opacity: .85;
 	padding: .5rem 1rem;
 	border-bottom: 2px solid transparent;
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
 	color: #fff;
+	opacity: 1;
 }
 
 .navbar .nav-link.active {
@@ -232,4 +235,69 @@ footer a {
 		transition: none !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+/* Hero */
+.hero {
+	background: linear-gradient(135deg, var(--mist) 0%, #dce9f2 100%);
+	border-bottom: 1px solid var(--line);
+	padding: 4.5rem 0 4rem;
+}
+
+.hero-text {
+	font-size: 1.2rem;
+	max-width: 60ch;
+}
+
+.btn-outline-custom {
+	color: var(--yale-blue);
+	border: 2px solid var(--yale-blue);
+	background: transparent;
+	font-weight: 600;
+	border-radius: 6px;
+}
+
+.btn-outline-custom:hover,
+.btn-outline-custom:focus {
+	background: var(--yale-blue);
+	color: #fff;
+}
+
+.btn-lg {
+	padding: .7rem 1.6rem;
+	font-size: 1rem;
+}
+
+/* At a glance */
+.glance {
+	border-left: 4px solid var(--pacific-blue);
+	background: var(--mist);
+	border-radius: 0 8px 8px 0;
+	padding: .5rem 1.5rem;
+}
+
+.glance li {
+	padding: .75rem 0;
+	border-bottom: 1px solid var(--line);
+}
+
+.glance li:last-child {
+	border-bottom: 0;
+}
+
+.glance strong {
+	display: block;
+	font-family: "Montserrat", sans-serif;
+	color: var(--ink);
+	font-size: .9rem;
+}
+
+/* Explore cards */
+a.explore {
+	text-decoration: none;
+	color: inherit;
+}
+
+a.explore:hover .card-title {
+	color: var(--pacific-blue);
 }
