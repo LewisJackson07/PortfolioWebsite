@@ -1,40 +1,235 @@
 :root {
-    --yale-blue: #1b4965;
-    --pacific-blue: #2c719c;
+	--ink: #14283a;
+	--yale-blue: #1b4965;
+	--pacific-blue: #2c719c;
+	--mist: #eef3f7;
+	--line: #d5e0e8;
+	--bs-body-color: #2b3a46;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Open Sans", system-ui, sans-serif;
+	background: #fff;
+	line-height: 1.7;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+	padding-bottom: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Montserrat", sans-serif;
+	color: var(--ink);
+	letter-spacing: -0.01em;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: clamp(2rem, 4vw, 2.75rem);
+	margin-bottom: .5rem;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin: 2.5rem 0 1rem;
+	padding-bottom: .5rem;
+	border-bottom: 2px solid var(--line);
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+p {
+	max-width: 70ch;
+}
+
+.text-center p,
+.card p {
+	max-width: none;
+}
+
+a {
+	color: var(--pacific-blue);
+}
+
+a:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible {
+	outline: 3px solid #f2b705;
+	outline-offset: 2px;
+}
+
+/* Navigation */
+.navbar {
+	background: var(--yale-blue);
+	padding: .75rem 0;
+}
+
+.navbar-brand {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	color: #fff;
+}
+
+.navbar .nav-link {
+	color: rgba(255, 255, 255, .8);
+	font-weight: 500;
+	padding: .5rem 1rem;
+	border-bottom: 2px solid transparent;
+}
+
+.navbar .nav-link:hover {
+	color: #fff;
+}
+
+.navbar .nav-link.active {
+	color: #fff;
+	border-bottom-color: #fff;
+}
+
+.navbar-toggler {
+	border-color: rgba(255, 255, 255, .5);
+}
+
+.navbar-toggler-icon {
+	filter: invert(1);
+}
+
+/* Intro band */
+.page-intro {
+	background: var(--mist);
+	border-bottom: 1px solid var(--line);
+	padding: 3rem 0 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.page-intro p {
+	font-size: 1.15rem;
+	margin: 0;
+}
+
+.lead-name {
+	color: var(--pacific-blue);
+	font-weight: 600;
+	font-family: "Montserrat", sans-serif;
+	margin-bottom: .25rem;
+}
+
+/* Cards */
+.card {
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	box-shadow: none;
+	transition: border-color .2s, box-shadow .2s;
+}
+
+.card:hover {
+	border-color: var(--pacific-blue);
+	box-shadow: 0 6px 18px rgba(27, 73, 101, .12);
+}
+
+.card-body {
+	padding: 1.5rem;
+}
+
+.card-title {
+	color: var(--ink);
+}
 
 .portfolio-card {
-    min-height: 5rem;
+	min-height: 3rem;
+	font-size: 1.25rem;
 }
 
-.card:hover{
-    transform: scale(1.03);
+.tag {
+	display: inline-block;
+	font-size: .75rem;
+	font-weight: 600;
+	color: var(--yale-blue);
+	background: var(--mist);
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	padding: .1rem .5rem;
+	margin: 0 .2rem .4rem 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat";
+.status {
+	color: #8a6200;
+	font-weight: 600;
+	margin-top: auto;
 }
 
-*{
-    font-family: "Open Sans";
+/* Buttons */
+.btn-custom {
+	background: var(--pacific-blue);
+	color: #fff;
+	border-radius: 6px;
+	padding: .5rem 1.25rem;
+	font-weight: 600;
+	border: 0;
 }
 
-nav{
-    background-color: var(--yale-blue);
+.btn-custom:hover,
+.btn-custom:focus {
+	background: var(--yale-blue);
+	color: #fff;
 }
 
-footer{
-    background-color: var(--yale-blue);
-    color: white;
+/* Skills */
+.skill-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem;
+	padding: 0;
+	list-style: none;
 }
 
-.btn-custom{
-    background-color: var(--pacific-blue);
-    color: white;
+.skill-list li {
+	background: var(--mist);
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	padding: .4rem 1rem;
+	font-weight: 600;
+	color: var(--yale-blue);
 }
 
-.btn-custom:hover{
-    background-color: var(--yale-blue);
-    color: white;
+/* Contact */
+.contact-card a {
+	word-break: break-word;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.contact-card a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	background: var(--yale-blue);
+	color: rgba(255, 255, 255, .85);
+}
+
+footer a {
+	color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
 }
